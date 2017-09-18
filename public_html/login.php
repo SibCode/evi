@@ -1,5 +1,5 @@
 <!--
-11.09.2017 by Simon Bertschinger
+18.09.2017 by Simon Bertschinger
 This is a sample login page
  -->
 <html>
