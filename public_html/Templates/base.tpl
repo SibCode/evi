@@ -8,6 +8,7 @@ This is the base template
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link type="text/css" href="..\css\modalLogin.css" rel="stylesheet">
   <title>Projekt EVI</title>
 </head>
 

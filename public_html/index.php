@@ -15,7 +15,7 @@ Changed to template-logic
     $home = new Template('Templates\base.tpl');
     $header = new Template('Templates\header.tpl');
     $footer = new Template ('Templates\footer.tpl');
-    $content = new Template('Templates\content.tpl');
+    $content = new Template('Templates\modalLogin.tpl');
 
     $home->set('header', $header->output());
     $home->set('footer', $footer->output());
