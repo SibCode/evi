@@ -16,7 +16,7 @@ This is the main header.
 <div id="header">
     <h1>EVI</h1>
     <ul class="nav global">
-        <li><a href="#">Home</a></li>
+        <li><a href="#">Test</a></li>
         <li><a href="#">Beurteilungsbogen</a></li>
         <li><a href="#">Abgaben</a></li>
     </ul>
