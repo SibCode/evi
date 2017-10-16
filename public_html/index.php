@@ -10,16 +10,16 @@ Changed to template-logic
     // Loading up our config file
     require_once('..\resources\config.php');
     include_once('Templates\template.class.php');
-    require_once('header.php');
+    //require_once('header.php');
 
-    $home = new Template('Templates\base.tpl');
+    $page = new Template('Templates\base.tpl');
     $header = new Template('Templates\header.tpl');
     $footer = new Template ('Templates\footer.tpl');
     $content = new Template('Templates\modalLogin.tpl');
 
-    $home->set('header', $header->output());
-    $home->set('footer', $footer->output());
-    $home->set('content', $content->output());
-    echo $home->output();
+    $page->set('header', $header->output());
+    $page->set('footer', $footer->output());
+    $page->set('content', $content->output());
+    echo $page->output();
 
 ?>

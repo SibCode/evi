@@ -1,3 +1,3 @@
-<div id="content">
-  <p>Dies ist der Content</p>
+<div>
+  <p>This is the content</p>
 </div>
