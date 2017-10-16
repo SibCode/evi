@@ -1,3 +1,10 @@
 <div id="header">
-  <p>Dies ist der header</p>
+  <div class="wrapper">
+    <div id="menubar">
+      <nav>
+        ##MENU##
+      </nav>
+    </div>
+    <div id="login">##LOGIN##</div>
+  </div>
 </div>

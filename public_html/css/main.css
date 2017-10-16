@@ -1,0 +1,42 @@
+body, hmtl {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#header {
+  background-color: lightblue;
+  height: 100px;
+}
+
+#header .wrapper {
+  display: table;
+}
+
+#menubar {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#menubar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#login {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#login button {
+  float: right;
+}

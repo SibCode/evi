@@ -1,3 +1,5 @@
 <div id="footer">
-  <p>Dies ist der Footer</p>
+  <div class="wrapper">
+    <p>footer</p>
+  </div>
 </div>

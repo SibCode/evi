@@ -13,13 +13,16 @@ Changed to template-logic
     //require_once('header.php');
 
     $page = new Template('Templates\base.tpl');
+    $menu = new Template('Templates\menu.tpl');
     $header = new Template('Templates\header.tpl');
     $footer = new Template ('Templates\footer.tpl');
-    $content = new Template('Templates\modalLogin.tpl');
+    $login = new Template('Templates\modalLogin.tpl');
 
+    $header->set('login', $login->output());
+    $header->set('menu', $menu->output());
     $page->set('header', $header->output());
     $page->set('footer', $footer->output());
-    $page->set('content', $content->output());
+
     echo $page->output();
 
 ?>
