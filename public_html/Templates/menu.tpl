@@ -1,4 +1,8 @@
 <ul>
-  <li>Home</li>
-  <li>IPA</li>
+  <li>
+    <a href="">Home</a>
+    </li>
+  <li>
+    <a href="">IPA</a>
+  </li>
 </ul>
