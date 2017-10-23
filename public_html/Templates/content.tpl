@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <div>
-    <p>This is the content</p>
+  <div class="content">
+    ##PAGECONTENT##
   </div>
 </div>
