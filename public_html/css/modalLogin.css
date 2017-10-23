@@ -12,17 +12,49 @@ This is the sample css for the modal dialoge
    width: 100%; /* Full width */
    height: 100%; /* Full height */
    overflow: auto; /* Enable scroll if needed */
-   background-color: rgb(0,0,0); /* Fallback color */
-   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+   background-color: #C6E2FF; /* Fallback color */
+   background-color: rgba(0,46,77,.4); /* Black w/ opacity */
    padding-top: 60px;
+   align-content: center;
+   text-align: center;
 }
 
 /* Modal Content/Box */
 .modal-content {
-   background-color: #fefefe;
+  position: relative;
+   background-color: #cfdbff;
    margin: 5px auto; /* 15% from the top and centered */
-   border: 1px solid #888;
-   width: 80%; /* Could be more or less, depending on screen size */
+   padding-left:1em;
+   padding-right:1em;
+   padding-top: 1em;
+   padding-bottom: 1em:
+   border: 3px solid #002929;
+   align-content: center;
+   width: 350px; /* Could be more or less, depending on screen size */
+   height: 400px;
+}
+
+.modal-content label {
+  min-width: 150px;
+}
+
+.modal-content .container div {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.modal-content div button[type="submit"] {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+/* Modal Content/Box */
+.avatar {
+  max-width: 60%;
+  max-height: 40%;
+  align-self: center;
+  align-content: center;
 }
 
 /* The Close Button */
@@ -31,7 +63,7 @@ This is the sample css for the modal dialoge
    position: absolute;
    right: 25px;
    top: 0;
-   color: #000;
+   color: #AAA;
    font-size: 35px;
    font-weight: bold;
 }
