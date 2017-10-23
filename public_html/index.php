@@ -20,8 +20,12 @@ Changed to template-logic
     $login = new Template('Templates\modalLogin.tpl');
     $content = new Template('Templates\content.tpl');
 
-    $homecontent = getHomePage();
-    $content->set('pagecontent', $homecontent);
+    if (empty($_GET['index'])) {
+      $getContent = getHomePage();
+    } else {
+      
+    }
+    $content->set('pagecontent', $getContent);
 
     $header->set('login', $login->output());
     $header->set('menu', $menu->output());
