@@ -23,7 +23,7 @@ Changed to template-logic
     if (empty($_GET['index'])) {
       $getContent = getHomePage();
     } else {
-      
+
     }
     $content->set('pagecontent', $getContent);
 
