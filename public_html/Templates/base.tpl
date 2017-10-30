@@ -17,10 +17,17 @@ This is the base template
 <body>
   <div id="page">
     ##HEADER##
-    ##CONTENT##
+    <div id="content">
+      ##CONTENT##
+    </div>
     <div id="footer">
       <div class="wrapper">
-        ##FOOTER##
+        <h3>Project EVI</h3>
+        <p>Bertschinger Simon</p>
+        <p>Greber Michelle</p>
+        <p>Lehmann Tanja</p>
+        <p>Niggeler Kirstin</p>
+        <p>Weil wir uns gerne Herausforderungen stellen...</p>
       </div>
     </div>
   </div>
