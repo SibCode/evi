@@ -229,3 +229,8 @@ This is the sample css for the modal dialoge
   color: #e5ecff;
   margin: 3px 0;
 }
+
+#bottombar {
+  background-color: #002e4d;
+  color: #66c2ff;
+}
