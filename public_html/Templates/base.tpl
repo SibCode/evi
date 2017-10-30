@@ -30,6 +30,9 @@ This is the base template
         <p>Weil wir uns gerne Herausforderungen stellen...</p>
       </div>
     </div>
+    <div id="bottombar">
+      <p>&copy; EVI</p>
+    </div>
   </div>
 </body>
 </html>

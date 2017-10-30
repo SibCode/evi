@@ -124,7 +124,6 @@ This is the sample css for the modal dialoge
   overflow: auto;
   background-color: #C6E2FF;
   background-color: rgba(0,46,77,.8);
-  padding-top: 60px;
   align-content: center;
   /*text-align: center;*/
 }
@@ -142,6 +141,7 @@ This is the sample css for the modal dialoge
   align-content: center;
   width: 350px;
   height: 400px;
+  top: 15%;
 }
 
 .modal-content .imgcontainer {
@@ -231,6 +231,16 @@ This is the sample css for the modal dialoge
 }
 
 #bottombar {
-  background-color: #002e4d;
+  text-align:center;
+  height: 25px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: #02091e;
+}
+
+#bottombar p {
+  margin: 0;
+  padding: 0;
   color: #66c2ff;
 }
