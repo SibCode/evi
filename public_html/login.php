@@ -21,14 +21,24 @@ This is a sample login page
     <script language="javascript">
       function check(form)/*function to check userid & password*/
       {
-        /*the following code checkes whether the entered userid and password are matching*/
-        if(form.userid.value == "myuserid" && form.pswrd.value == "mypswrd")
-        {
-          window.open('target.html') /*opens the target page while Id & password matches*/
-        }
-        else
-        {
-          alert("Error Password or Username")/*displays error message*/
+        include('../includes/connect.inc.php');
+        $server = 'SERVER\DBNAME';
+
+        //connect MSSQL
+        dbc = mssql_connect($server, 'username', 'userpw');
+
+        if ($dbc) {
+          //the following code checkes whether the entered userid and password are matching an entry in the DB*/
+          $query = "SELECT * FROM user WHERE username = '". mysqli_real_escape_string(form.userid.value) ."' AND pass = '". mysqli_real_escape_string(form.pswrd.value) ."'" ;
+          $result = mysqli_query($dbc,$query);
+          if (mysqli_num_rows($result) == 1) {
+            //Pass
+          } else {
+            //Fail
+            alert("Error Password or Username")/*displays error message*/
+          }
+        } else {
+          alert('Error Connecting to the Database');
         }
       }
     </script>

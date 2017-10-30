@@ -19,7 +19,7 @@ This is a sample login page with modal dialoge
 
     <form class="" action="/action_page.php">
 
-      <div class="container">
+      <form class="container">
         <div>
           <label><b>Username:</b></label>
           <input type="text" placeholder="Enter Username" name="uname" required>
@@ -32,7 +32,7 @@ This is a sample login page with modal dialoge
           <input type="checkbox" checked="checked"> Remember me
         </div>
         <div>
-          <button type="submit">Login</button>
+          <button type="submit" onclick="check(this.form)">Login</button>
         </div>
         <div>
           <span class="psw">Forgot <a href="#">password?</a></span>
@@ -40,6 +40,30 @@ This is a sample login page with modal dialoge
       </div>
 
     </form>
+    <script language="javascript">
+      function check(form)/*function to check userid & password*/
+      {
+        include('../includes/connect.inc.php');
+        $server = 'SERVER\DBNAME';
+
+        //connect MSSQL
+        dbc = mssql_connect($server, 'username', 'userpw');
+
+        if ($dbc) {
+          //the following code checkes whether the entered userid and password are matching an entry in the DB*/
+          $query = "SELECT * FROM user WHERE username = '". mysqli_real_escape_string(form.userid.value) ."' AND pass = '". mysqli_real_escape_string(form.pswrd.value) ."'" ;
+          $result = mysqli_query($dbc,$query);
+          if (mysqli_num_rows($result) == 1) {
+            //Pass
+          } else {
+            //Fail
+            alert("Error Password or Username")/*displays error message*/
+          }
+        } else {
+          alert('Error Connecting to the Database');
+        }
+      }
+    </script>
   </div>
 </div>
 
