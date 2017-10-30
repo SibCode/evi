@@ -9,8 +9,8 @@ This is the base template
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link type="text/css" href="..\css\modalLogin.css" rel="stylesheet" />
   <link type="text/css" href="..\css\main.css" rel="stylesheet" />
+  <link type="text/css" href="..\css\media.css" rel="stylesheet" />
   <title>Projekt EVI</title>
 </head>
 
@@ -18,7 +18,11 @@ This is the base template
   <div id="page">
     ##HEADER##
     ##CONTENT##
-    ##FOOTER##
+    <div id="footer">
+      <div class="wrapper">
+        ##FOOTER##
+      </div>
+    </div>
   </div>
 </body>
 </html>

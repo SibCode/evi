@@ -16,7 +16,6 @@ Changed to template-logic
     $page = new Template('Templates\base.tpl');
     $menu = new Template('Templates\menu.tpl');
     $header = new Template('Templates\header.tpl');
-    $footer = new Template ('Templates\footer.tpl');
     $login = new Template('Templates\modalLogin.tpl');
     $content = new Template('Templates\content.tpl');
 
@@ -30,7 +29,6 @@ Changed to template-logic
     $header->set('login', $login->output());
     $header->set('menu', $menu->output());
     $page->set('header', $header->output());
-    $page->set('footer', $footer->output());
     $page->set('content', $content->output());
 
     echo $page->output();
