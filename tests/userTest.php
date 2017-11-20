@@ -5,7 +5,9 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * @covers user
+ * 20.11.2017 by Simon Bertschinger.
  */
+ 
 final class UserTest extends TestCase
 {
     public function testCanBeCreatedFromValidEmailAddress(): void

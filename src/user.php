@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+/*
+20.11.2017 by Simon Bertschinger.
+*/
+
 final class User
 {
     private $name;
