@@ -27,7 +27,7 @@ final class UserTest extends TestCase
     {
         $this->assertEquals(
             'user@example.com',
-            Email::fromString('user@example.com')
+            User::fromString('user@example.com')
         );
     }
 }
