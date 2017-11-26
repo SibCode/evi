@@ -2,6 +2,35 @@
 18.09.2017 by Simon Bertschinger
 This is a sample login page with modal dialoge
 -->
+<!-- The Script -->
+<script type="text/javascript" language="javascript">
+document.getElementById ("submit_login").addEventListener ("click", check, false);
+
+function check(form)/*function to check userid & password*/
+{
+  include('../includes/connect.inc.php');
+  $server = 'localhost\evi';
+
+  //connect MSSQL
+  dbc = mssql_connect($server, 'username', 'userpw');
+
+  if ($dbc) {
+    //the following code checkes whether the entered userid and password are matching an entry in the DB*/
+    $query = "SELECT * FROM users WHERE username = '". mysqli_real_escape_string(form.userid.value) ."' AND pass = '". mysqli_real_escape_string(form.pswrd.value) ."'" ;
+    $result = mysqli_query($dbc,$query);
+    if (mysqli_num_rows($result) == 1) {
+      //Pass
+      setcookie("login",form.userid.value,86400);
+    } else {
+      //Fail
+      alert("Error Password or Username")/*displays error message*/
+    }
+  } else {
+    alert('Error Connecting to the Database');
+  }
+}
+</script>
+
 <!-- Button to open the modal login form -->
 <button onclick="document.getElementById('modalLogin').style.display='block'">Login</button>
 
@@ -29,36 +58,12 @@ This is a sample login page with modal dialoge
         <input type="checkbox" checked="checked" /> Remember me
       </div>
       <div>
-        <button type="submit" onclick="check(this.form)">Login</button>
+        <button id="submit_login" type="submit" onclick="check(this.form)">Login</button>
       </div>
       <div>
         <span class="psw">Forgot <a href="#">password?</a></span>
       </div>
     </form>
-    <script language="javascript">
-    function check(form)/*function to check userid & password*/
-    {
-      include('../includes/connect.inc.php');
-      $server = 'SERVER\DBNAME';
-
-      //connect MSSQL
-      dbc = mssql_connect($server, 'username', 'userpw');
-
-      if ($dbc) {
-        //the following code checkes whether the entered userid and password are matching an entry in the DB*/
-        $query = "SELECT * FROM user WHERE username = '". mysqli_real_escape_string(form.userid.value) ."' AND pass = '". mysqli_real_escape_string(form.pswrd.value) ."'" ;
-        $result = mysqli_query($dbc,$query);
-        if (mysqli_num_rows($result) == 1) {
-          //Pass
-        } else {
-          //Fail
-          alert("Error Password or Username")/*displays error message*/
-        }
-      } else {
-        alert('Error Connecting to the Database');
-      }
-    }
-    </script>
   </div>
 </div>
 

@@ -33,6 +33,7 @@ This is a sample login page
           $result = mysqli_query($dbc,$query);
           if (mysqli_num_rows($result) == 1) {
             //Pass
+
           } else {
             //Fail
             alert("Error Password or Username")/*displays error message*/
