@@ -1,8 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 
 <!--
-18.09.2017 Greber Michelle
 This is the base template
+
+Author: Greber Michelle
 -->
 
 <html lang="en">
@@ -11,6 +12,7 @@ This is the base template
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link type="text/css" href="..\css\main.css" rel="stylesheet" />
   <link type="text/css" href="..\css\media.css" rel="stylesheet" />
+  <script type="text/javascript" src="\Functionality\login.js"></script>
   <title>##TITLE##</title>
 </head>
 

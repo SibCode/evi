@@ -1,3 +1,9 @@
+/**
+* Main stylesheet
+*
+* Author: Michelle Greber, Simon Bertschinger
+**/
+
 @import url('https://fonts.googleapis.com/css?family=Comfortaa');
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
@@ -112,7 +118,6 @@ a:hover, a:visited:hover {
 18.09.2017 by Simon Bertschinger
 This is the sample css for the modal dialoge
 */
-/* The Modal (background) */
 .modal {
   display: none;
   position: fixed;
@@ -125,10 +130,8 @@ This is the sample css for the modal dialoge
   background-color: #C6E2FF;
   background-color: rgba(0,46,77,.8);
   align-content: center;
-  /*text-align: center;*/
 }
 
-/* Modal Content/Box */
 .modal-content {
   position: relative;
   background-color: #e5ecff;
@@ -164,16 +167,14 @@ This is the sample css for the modal dialoge
   right: 10px;
 }
 
-/* Modal Content/Box */
-.avatar {
+.modal-content .avatar {
   max-width: 60%;
   max-height: 40%;
   align-self: center;
   align-content: center;
 }
 
-/* The Close Button */
-.close {
+.modal-content .close {
   position: absolute;
   right: 25px;
   top: 0;
@@ -182,8 +183,8 @@ This is the sample css for the modal dialoge
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.modal-content .close:hover,
+.modal-content .close:focus {
   color: red;
   cursor: pointer;
 }

@@ -1,14 +1,15 @@
 <?php
-declare(strict_types=1);
-
-use PHPUnit\Framework\TestCase;
 
 /**
  * @covers user
- * 20.11.2017 by Simon Bertschinger.
- * 27.11.2017:
+ * Author: Simon Bertschinger
+ *
  * User Test Class used to verify functionality of the User class
  */
+
+declare(strict_types=1);
+
+use PHPUnit\Framework\TestCase;
 
 final class UserTest extends TestCase
 {
