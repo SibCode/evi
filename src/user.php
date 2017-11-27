@@ -1,11 +1,11 @@
 <?php
-declare(strict_types=1);
+/**
+ * Author: Simon Bertschinger.
+ *
+ * User Class used to verify username which needs to be a email while registering
+ */
 
-/*
-20.11.2017 by Simon Bertschinger.
-27.11.2017:
-User Class used to verify username which needs to be a email while registering
-*/
+declare(strict_types=1);
 
 final class User
 {

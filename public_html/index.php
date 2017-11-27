@@ -1,11 +1,11 @@
 <?php
 /**
-* Main-page with template logic.
-* All templates are being loaded and filled from here.
-*
-* Authors: Greber Michelle, Bertschinger Simon
-*
-**/
+ * Main-page with template logic.
+ * All templates are being loaded and filled from here.
+ *
+ * Authors: Greber Michelle, Bertschinger Simon
+ *
+ */
 
     // Loading up our config file
     require_once('..\resources\config.php');
