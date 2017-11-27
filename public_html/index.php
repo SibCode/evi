@@ -1,17 +1,18 @@
 <?php
-/*
-11.09.2017 by Simon Bertschinger
-This is the main window index.
-
-18.09.2017 Greber Michelle
-Changed to template-logic
-*/
+/**
+* Main-page with template logic.
+* All templates are being loaded and filled from here.
+*
+* Authors: Greber Michelle, Bertschinger Simon
+*
+**/
 
     // Loading up our config file
     require_once('..\resources\config.php');
+
+    // Including template-class
     include_once('Templates\template.class.php');
     include('Functionality\contentHandler.php');
-    //require_once('header.php');
 
     $page = new Template('Templates\base.tpl');
     $menu = new Template('Templates\menu.tpl');
