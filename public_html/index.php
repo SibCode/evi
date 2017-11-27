@@ -15,7 +15,7 @@
     include('Functionality\contentHandler.php');
 
     $page = new Template('Templates\base.tpl');
-    $menu = new Template('Templates\menu.tpl');
+    /*$menu = new Template('Templates\menu.tpl');*/
     $header = new Template('Templates\header.tpl');
     $login = new Template('Templates\modalLogin.tpl');
     $content = new Template('Templates\content.tpl');

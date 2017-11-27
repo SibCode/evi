@@ -1,10 +1,10 @@
 <div id="header">
   <div class="wrapper">
-    <div id="menubar">
+<!--    <div id="menubar">
       <nav>
         ##MENU##
       </nav>
-    </div>
+    </div> -->
     <div id="login">##LOGIN##</div>
   </div>
 </div>
