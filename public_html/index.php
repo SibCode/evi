@@ -20,6 +20,7 @@ Changed to template-logic
     $content = new Template('Templates\content.tpl');
 
     if (empty($_GET['index'])) {
+      $page->set('title', 'Home');
       $getContent = getHomePage();
     } else {
 
