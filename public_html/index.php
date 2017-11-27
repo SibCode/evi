@@ -29,7 +29,7 @@
     $content->set('pagecontent', $getContent);
 
     $header->set('login', $login->output());
-    $header->set('menu', $menu->output());
+    /*$header->set('menu', $menu->output());*/
     $page->set('header', $header->output());
     $page->set('content', $content->output());
 
