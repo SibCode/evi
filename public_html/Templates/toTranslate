@@ -1,0 +1,20 @@
+<div class="wrapper">
+    <div class="criteria">
+        <div class="criteria-props">
+            <span class="criteria-id">1</span>
+        </div>
+
+        <div class="criteria-title">
+            <h3>Projektmanagement und Planung</h3>
+        </div>
+
+        <div class="criteria-cont">
+            <div class="criteria-desc">Komplexe Aufträge werden mit Unterstützung einer Projektmanagement-Methode gelöst. Auch für «Macherarbeiten» müssen die Verhältnisse analysiert, das Zielsystem geplant, Varianten verglichen und ein Handlungsplan entworfen werden.</div>
+            <div class="criteria-lvl"><span class="lvl">Gütestufe 3</span>Mindestens die zwei Phasen «Analyse, Planung, Evaluation» und «Realisierung, Test» sind im Zeitplan aufgezeigt und in der Arbeit gut umgesetzt. Im IPA-Bericht ist erwähnt, welche Projektmanagementmethode eingesetzt wird.</div>
+            <div class="criteria-lvl"><span class="lvl">Gütestufe 2</span>Der Zeitplan ist realistisch und vollständig, die Projektmanagementmethode ist aber nicht benannt oder unpassend gewählt.</div>
+            <div class="criteria-lvl"><span class="lvl">Gütestufe 1</span>Der Zeitplan ist unvollständig. Insbesondere: für die Planungs-Phase oder/und die Testphase ist zu wenig oder keine Zeit vorgesehen.</div>
+            <div class="criteria-lvl"><span class="lvl">Gütestufe 0</span>Der Zeitplan ist unrealistisch oder/und chaotisch oder fehlt ganz.</div>
+        </div>
+    </div>
+
+  </div>

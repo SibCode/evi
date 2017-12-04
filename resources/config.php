@@ -1,7 +1,7 @@
 <?php
 
 /*
-11.09.2017 by Simon Bertschinger
+Simon Bertschinger
 This file includes all general configurations of the app.
 Currently it includes a mockup of configurations.
 */
