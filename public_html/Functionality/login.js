@@ -12,7 +12,7 @@ function check(form)/*function to check userid & password*/
     $result = mysqli_query($dbc,$query);
     if (mysqli_num_rows($result) == 1) {
       //Pass
-      setcookie("login",form.userid.value,86400);
+      setcookie("login",form.userid.value,8640);
     } else {
       //Fail
       alert("Error Password or Username")/*displays error message*/
