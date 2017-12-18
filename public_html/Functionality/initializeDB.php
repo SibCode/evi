@@ -12,10 +12,9 @@
   if($result->num_rows != 1) {
     mysqli_query(include_once("../resources/db/initialize.sql"));
     if(!file_exists($csvfile)) {
-        die("File not found. Make sure you specified the correct path.");
+      die("File not found. Make sure you specified the correct path.");
     }
-    $pdo->exec("
-        LOAD DATA LOCAL INFILE ".$pdo->quote($csvfile)." INTO TABLE `$table`
+    $pdo->exec("LOAD DATA LOCAL INFILE ".$pdo->quote($csvfile)." INTO TABLE `$table`
           FIELDS TERMINATED BY ".$pdo->quote($fieldseparator)."
           LINES TERMINATED BY ".$pdo->quote($lineseparator));
 
