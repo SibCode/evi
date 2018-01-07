@@ -2,22 +2,28 @@
 
   include_once("connectDB.php");
 
+  $connectionDB = connectToDB();
   $table = "Kriterien";
   $fieldseparator = ";";
   $lineseparator = "\n";
   $csvfile = "../resources/db/Kriterien.csv";
 
-  $result = $mysqli->query("SHOW TABLES LIKE '".$table."'"));
+  $result = $connectionDB->query("SHOW TABLES LIKE '".$table."'");
 
-  if($result->num_rows != 1) {
-    mysqli_query(include_once("../resources/db/initialize.sql"));
+  if($result->rowCount() != 1) {
+    $connectionDB->query(file_get_contents("../resources/db/initialize.sql"));
     if(!file_exists($csvfile)) {
       die("File not found. Make sure you specified the correct path.");
     }
-    $pdo->exec("LOAD DATA LOCAL INFILE ".$pdo->quote($csvfile)." INTO TABLE `$table`
-          FIELDS TERMINATED BY ".$pdo->quote($fieldseparator)."
-          LINES TERMINATED BY ".$pdo->quote($lineseparator));
-
+    try {
+      $connectionDB->exec("LOAD DATA LOCAL INFILE ".$connectionDB->quote($csvfile)." INTO TABLE `$table`
+          FIELDS TERMINATED BY ".$connectionDB->quote($fieldseparator)."
+          LINES TERMINATED BY ".$connectionDB->quote($lineseparator))."
+          (kriterien_teil, kriterien_nr, titel, beschreibung, stufe3, stufe2, stufe1, stufe0)";
+    }
+    catch (PDOException $e) {
+        die("database connection failed: ".$e->getMessage());
+    }
   }
 
 
