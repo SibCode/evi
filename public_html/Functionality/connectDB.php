@@ -6,11 +6,10 @@
 
     $databaseusername="root";
     $databasepassword = "";
-
     try {
-        $pdo = new PDO("mysql:host=".$databasehost.";dbname=".$databasename,
-            $databaseusername, $databasepassword);
-        return $pdo;
+      $pdo = new PDO("mysql:host=".$databasehost.";dbname=".$databasename.";charset=utf8",
+          $databaseusername, $databasepassword, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::MYSQL_ATTR_LOCAL_INFILE => true));
+      return $pdo;
     } catch (PDOException $e) {
         die("database connection failed: ".$e->getMessage());
     }

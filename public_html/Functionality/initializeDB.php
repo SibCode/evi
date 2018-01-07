@@ -4,39 +4,41 @@
 
   $connectionDB = connectToDB();
   $table = "Kriterien";
-  $fieldseparator = ";";
+  $fieldseparator = "£";
   $lineseparator = "\n";
-  $csvfile = "../resources/db/Kriterien.csv";
+  $csvfile = realpath('..\resources\db\Kriterien.csv');
+  $adminHashPW = '$2y$10$Vz74o8TuLRHLPpBC9k9a2eIf9UKtQM7el16L.EJxwTMbVYs6uoBfu';
 
   $result = $connectionDB->query("SHOW TABLES LIKE '".$table."'");
 
   if($result->rowCount() != 1) {
-    $connectionDB->query(file_get_contents("../resources/db/initialize.sql"));
+    try {
+      $connectionDB->query(file_get_contents('..\resources\db\initialize.sql'));
+    }
+    catch (PDOException $e) {
+      die("Creating tables failed: ".$e->getMessage());
+    }
+    try {
+      $connectionDB->query("INSERT INTO `Users` (name, vorname, email, passwort) VALUES ('', 'admin', 'admin@admin.ch', '$adminHashPW')");
+    }
+    catch (PDOException $e) {
+      die("Admin user could not be inserted: ".$e->getMessage());
+    }
     if(!file_exists($csvfile)) {
       die("File not found. Make sure you specified the correct path.");
     }
     try {
-      $connectionDB->exec("LOAD DATA LOCAL INFILE ".$connectionDB->quote($csvfile)." INTO TABLE `$table`
+      $connectionDB->query("LOAD DATA LOCAL INFILE ".$connectionDB->quote($csvfile)." INTO TABLE `$table`
           FIELDS TERMINATED BY ".$connectionDB->quote($fieldseparator)."
-          LINES TERMINATED BY ".$connectionDB->quote($lineseparator))."
-          (kriterien_teil, kriterien_nr, titel, beschreibung, stufe3, stufe2, stufe1, stufe0)";
+          LINES TERMINATED BY ".$connectionDB->quote($lineseparator)."
+          (kriterien_id, kriterien_teil, kriterien_nr, titel, beschreibung, stufe3, stufe2, stufe1, stufe0)");
     }
     catch (PDOException $e) {
-        die("database connection failed: ".$e->getMessage());
+        die("database could not be filled with criteria: ".$e->getMessage());
     }
   }
 
+/*PASSWORD_BCRYPT*/
 
 
-/*
-    $query = <<<eof
-        "LOAD DATA INFILE '$fileName'
-         INTO TABLE tableName
-         FIELDS TERMINATED BY ';'
-         LINES TERMINATED BY '\n'
-        (field1,field2,field3,etc)
-    eof;"
-
-    $db->query($query);
-*/
 ?>

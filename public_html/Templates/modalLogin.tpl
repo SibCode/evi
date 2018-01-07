@@ -17,7 +17,7 @@ This is a sample login page with modal dialoge
       <img src="img/login_img.png" alt="Avatar" class="avatar">
     </div>
 
-    <form class="container">
+    <form class="container" action="..\functionality\login.php" method="post">
       <div>
         <label><b>Username:</b></label>
         <input type="text" placeholder="Enter Username" name="uname" required />
