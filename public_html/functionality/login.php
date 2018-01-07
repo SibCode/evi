@@ -14,7 +14,7 @@
   catch (PDOException $e) {
     die("Query was not executed: ".$e->getMessage());
   }
-  $result = $preparedStatement->fetchObject();
+  $result = $preparedStatement->fetchAll();
   echo print_r($result);
   if (count($result) > 0 && password_verify($psw, $result['passwort'])) {
     //Pass

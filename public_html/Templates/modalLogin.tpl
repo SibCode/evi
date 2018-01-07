@@ -3,9 +3,11 @@
 This is a sample login page with modal dialoge
 -->
 
-<!-- Button to open the modal login form -->
-<button onclick="document.getElementById('modalLogin').style.display='block'">Login</button>
 
+<!-- Button to open the modal login form -->
+<!--
+<button onclick="document.getElementById('modalLogin').style.display='block'">Login</button>
+-->
 <!-- The Modal -->
 <div id="modalLogin" class="modal">
   <span onclick="document.getElementById('modalLogin').style.display='none'"

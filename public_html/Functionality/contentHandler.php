@@ -9,20 +9,31 @@
   function getCriteriaPage() {
     $criteria = getCriteria();
     $criteriaHTML = getCriteriaString($criteria);
+    return $criteriaHTML;
   }
 
   function getCriteria(){
-
-
+    include_once('connectDB.php');
+    $connectionDB = connectToDB();
+    $query = "SELECT * FROM kriterien";
+    $preparedStatement = $connectionDB->prepare($query);
+    $preparedStatement->execute();
+    $result = $preparedStatement->fetchAll();
+    $connectionDB = null;
+    return $result;
   }
 
   function getCriteriaString($criterias) {
-    if(is_array($criterias)) {
+    $criteriaString = "";
+    if(!empty($criterias)) {
       foreach ($criterias as $criteria) {
             $criteriaString .= "<div class='wrapper'>
               <div class='criteria'>
                 <div class='criteria-props'>
                   <span class='criteria-id'>".$criteria['kriterien_nr']."</span>
+                </div>
+                <div class='criteria-check'>
+                  <input type='checkbox'>
                 </div>
                 <div class='criteria-title'>
                 <h3>".$criteria['titel']."</h3>
@@ -35,11 +46,10 @@
                   <div class='criteria-lvl'><span class='lvl'>Gütestufe 0</span>".$criteria['stufe0']."</div>
                 </div>
               </div>
-
             </div>";
       }
     }
-    return $criteriaString();
+    return $criteriaString;
   }
 
 ?>

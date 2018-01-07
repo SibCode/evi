@@ -97,7 +97,7 @@ a:hover, a:visited:hover {
   width: 200px;
 }
 
-#login button {
+#login button, #login input {
   float: right;
   -webkit-appearance: none;
   background-color: inherit;
@@ -108,7 +108,7 @@ a:hover, a:visited:hover {
   border-radius: 3px;
 }
 
-#login button:hover {
+#login button:hover, #login input:hover {
   background-color: #ccebff;
   cursor: pointer;
   color: #002e4d;
@@ -208,6 +208,58 @@ This is the sample css for the modal dialoge
 
 #content {
   padding-bottom: 200px;
+}
+
+/*Criteria*/
+
+.criteria {
+  margin: 25px 0;
+}
+
+.criterias-props {
+  width: 50px;
+  display: inline-block;
+}
+
+.criteria-id {
+  color: #66c2ff;
+  font-weight: 900px;
+  background-color: #02091e;
+  width: 30px;
+  display: inline-block;
+  text-align: center;
+}
+
+.criteria-title {
+  display: inline-block;
+}
+
+.criteria-check {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 15px;
+}
+
+.criteria-desc {
+  font-weight: 500;
+  margin: 15px 0;
+  border-bottom: 1px solid #02091e;
+  line-height: 30px;
+}
+
+.criteria-lvl {
+  margin: 10px 0 10px 15px;
+}
+
+.lvl {
+  margin-right: 15px;
+  color: #002e4d;
+  font-weight: 700;
+}
+
+.criteria-cont {
+  padding-bottom: 15px;
 }
 
 #footer {

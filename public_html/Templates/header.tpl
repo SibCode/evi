@@ -1,6 +1,6 @@
 <div id="header">
   <div class="wrapper">
-    ##MENU##
+    <!--##MENU##-->
     <div id="login">##LOGIN##</div>
   </div>
 </div>
