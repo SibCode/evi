@@ -21,15 +21,15 @@
     $header = new Template('Templates\header.tpl');
     //$login = new Template('Templates\modalLogin.tpl');
     // Button to Fake-Login
-    if (!isset($_SESSION["username"])) {
-      $login = '<form action="..\functionality\fakelogin.php" method="post">
+    if (!isset($_SESSION['username'])) {
+      $login = '<form action="functionality\fakelogin.php" method="post">
         <input type="submit" value="Login" />
       </form>';
     }
     else {
       $username = $_SESSION['username'];
       $login = '<div style="color: #66c2ff;">Welcome <span style="color:#e5ecff;">'.$username.'</span></div>
-      <form action="..\functionality\fakelogout.php" method="post">
+      <form action="functionality\fakelogout.php" method="post">
         <input type="submit" value="Logout" />
       </form>';
     }
